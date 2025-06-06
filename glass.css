@@ -1,0 +1,14 @@
+.glass{
+    background: rgba( 39, 31, 52, 0.7 );
+
+backdrop-filter: blur( 2px );
+-webkit-backdrop-filter: blur( 1.5px );
+border-radius: 10px;
+
+}
+
+.glass2{
+    background: rgba( 39, 31, 52, 0.2 );
+backdrop-filter: blur( 3px );
+-webkit-backdrop-filter: blur( 3px );
+}

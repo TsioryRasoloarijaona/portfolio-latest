@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="glass.css" />
+    <link rel="stylesheet" href="gradient.css" />
+    <link rel="stylesheet" href="animation.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="w-screen bg-[#0A0018] text-white py-6 overflow-x-hidden">
+    <header class="w-screen space-y-20">
+      <nav class="lg:w-4/6 w-[90%]  mx-auto flex justify-between">
+        <div class="flex flex-row items-center gap-10">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            />
+          </svg>
+          <svg
+            class="w-6 h-6 text-white"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2.01 3.61 4.62v4.71z"
+            />
+          </svg>
+          <svg
+            class="w-6 h-6 text-white"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z"
+            />
+          </svg>
+        </div>
+        <!-- Desktop Nav -->
+        <ul
+            class="hidden lg:flex flex-row items-center gap-10 justify-between p-4 text-sm font-semibold"
+        >
+            <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+            <li>
+                <a href="#" class="text-white hover:text-gray-300">Projects</a>
+            </li>
+            <li>
+                <a href="#" class="text-white hover:text-gray-300">Skills</a>
+            </li>
+            <li>
+                <a href="#" class="text-white hover:text-gray-300">Services</a>
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-4 py-2 rounded-full"
+                    >Download my cv</a
+                >
+            </li>
+        </ul>
+        <!-- Mobile Hamburger -->
+        <div class="lg:hidden flex items-center">
+            <button id="drawer-toggle" class="focus:outline-none">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <!-- Drawer Menu -->
+        <div id="drawer-menu"
+            class="fixed top-0 right-0 h-full w-64 bg-[#1a0936] shadow-lg z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+            <div class="flex flex-col p-8 gap-6">
+                <button id="drawer-close" class="self-end mb-4 focus:outline-none">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <a href="#" class="text-white hover:text-gray-300 text-lg">Home</a>
+                <a href="#" class="text-white hover:text-gray-300 text-lg">Projects</a>
+                <a href="#" class="text-white hover:text-gray-300 text-lg">Skills</a>
+                <a href="#" class="text-white hover:text-gray-300 text-lg">Services</a>
+                <a
+                    href="#"
+                    class="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-4 py-2 rounded-full text-center"
+                    >Download my cv</a
+                >
+            </div>
+        </div>
+        <script>
+            // Drawer open/close logic
+            const drawerToggle = document.getElementById('drawer-toggle');
+            const drawerMenu = document.getElementById('drawer-menu');
+            const drawerClose = document.getElementById('drawer-close');
+            drawerToggle?.addEventListener('click', () => {
+                drawerMenu.classList.remove('translate-x-full');
+            });
+            drawerClose?.addEventListener('click', () => {
+                drawerMenu.classList.add('translate-x-full');
+            });
+            // Optional: close drawer on outside click
+            window.addEventListener('click', (e) => {
+                if (
+                    !drawerMenu.contains(e.target) &&
+                    !drawerToggle.contains(e.target) &&
+                    !drawerMenu.classList.contains('translate-x-full')
+                ) {
+                    drawerMenu.classList.add('translate-x-full');
+                }
+            });
+        </script>
+      </nav>
+      <div class="text-center flex flex-col items-center">
+        <div class="text-4xl font-bold text-white lg:w-1/3 md:w-[90%] w-[90%] leading-relaxed">
+          Let’s build something functional, fast, and user-friendly together
+        </div>
+        <p
+          class="text-center text-md mt-10 font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent"
+        >
+          Tsiory Rasoloarijaona, Software Developer
+        </p>
+      </div>
+    </header>
+    <main class="flex justify-center">
+      <div class="mt-20 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-4/6  gap-8 md:w-[90%] lg:w-4/6">
+        <!-- Card 1 -->
+        <div
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-2 text-left w-full">
+              car selling or rental website
+            </h3>
+            <p class="text-gray-200 mb-4 text-left w-full">full stack app</p>
+            <!-- Status -->
+            <div class="flex items-center mb-4">
+              <!-- Done Icon -->
+              <svg
+                class="w-5 h-5 text-green-400 mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span class="text-green-400 font-medium">Done</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="text-gray-300 hover:underline"
+                >see project in github</a
+              >
+            </div>
+          </div>
+          <div class="w-full flex justify-end mt-4">
+            <button
+              class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+            >
+              more details
+            </button>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-2 text-left w-full">
+              Card Title 2
+            </h3>
+            <p class="text-gray-200 mb-4 text-left w-full">
+              Description for card 2.
+            </p>
+            <!-- Status -->
+            <div class="flex items-center mb-4">
+              <!-- In Progress Icon -->
+              <svg
+                class="w-5 h-5 text-yellow-400 mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6l4 2"
+                />
+              </svg>
+              <span class="text-yellow-400 font-medium">In Progress</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="text-gray-300 hover:underline"
+                >see project in github</a
+              >
+            </div>
+          </div>
+          <div class="w-full flex justify-end mt-4">
+            <button
+              class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+            >
+              more details
+            </button>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-2 text-left w-full">
+              Card Title 3
+            </h3>
+            <p class="text-gray-200 mb-4 text-left w-full">
+              Description for card 3.
+            </p>
+            <!-- Status -->
+            <div class="flex items-center mb-4">
+              <!-- In Progress Icon -->
+              <svg
+                class="w-5 h-5 text-yellow-400 mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6l4 2"
+                />
+              </svg>
+              <span class="text-yellow-400 font-medium">In Progress</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="text-gray-300 hover:underline"
+                >see project in github</a
+              >
+            </div>
+          </div>
+          <div class="w-full flex justify-end mt-4">
+            <button
+              class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+            >
+              more details
+            </button>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-2 text-left w-full">
+              Card Title 4
+            </h3>
+            <p class="text-gray-200 mb-4 text-left w-full">
+              Description for card 4.
+            </p>
+            <!-- Status -->
+            <div class="flex items-center mb-4">
+              <!-- Done Icon -->
+              <svg
+                class="w-5 h-5 text-green-400 mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span class="text-green-400 font-medium">Done</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11</div>.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="text-gray-300 hover:underline"
+                >see project in github</a
+              >
+            </div>
+          </div>
+          <div class="w-full flex justify-end mt-4">
+            <button
+              class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+            >
+              more details
+            </button>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-2 text-left w-full">
+              Card Title 5
+            </h3>
+            <p class="text-gray-200 mb-4 text-left w-full">
+              Description for card 5.
+            </p>
+            <!-- Status -->
+            <div class="flex items-center mb-4">
+              <!-- In Progress Icon -->
+              <svg
+                class="w-5 h-5 text-yellow-400 mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6l4 2"
+                />
+              </svg>
+              <span class="text-yellow-400 font-medium">In Progress</span>
+            </div>
+            <div class="flex items-ce</div>nter space-x-2">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="text-gray-300 hover:underline"
+                >see project in github</a
+              >
+            </div>
+          </div>
+          <div class="w-full flex justify-end mt-4">
+            <button
+              class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+            >
+              more details
+            </button>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-2 text-left w-full">
+              Card Title 6
+            </h3>
+            <p class="text-gray-200 mb-4 text-left w-full">
+              Description for card 6.
+            </p>
+            <!-- Status -->
+            <div class="flex items-center mb-4">
+              <!-- Done Icon -->
+              <svg
+                class="w-5 h-5 text-green-400 mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span class="text-green-400 font-medium">Done</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="text-gray-300 hover:underline"
+                >see project in github</a
+              >
+            </div>
+          </div>
+          <div class="w-full flex justify-end mt-4">
+            <button
+              class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+            >
+              more details
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="mt-20 w-full">
+      <p class="text-center text-4xl font-bold">Skills</p>
+      <div
+        class="lg:w-4/6 md:w-[90%] w-[90%] py-20 mx-auto flex flex-col justify-center items-center gap-16"
+      >
+        <!-- Animated Skills Row 1: défilement de droite à gauche -->
+        <div class="overflow-hidden w-full">
+          <div
+            class="flex flex-row justify-center items-center gap-24 text-7xl animate-scroll-left"
+            style="width: max-content"
+            id="skills-row-1"
+          >
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=13679&format=png&color=000000"
+                alt="Java"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Java</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=40669&format=png&color=000000"
+                alt="C++"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">C++</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=90519&format=png&color=000000"
+                alt="Spring Boot"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white"
+                >Spring Boot</span
+              >
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=bzf0DqjXFHIW&format=png&color=000000"
+                alt="React"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">React</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000"
+                alt="HTML5"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">JavaScript</span>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=13679&format=png&color=000000"
+                alt="Java"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Java</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=40669&format=png&color=000000"
+                alt="C++"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">C++</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=90519&format=png&color=000000"
+                alt="Spring Boot"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white"
+                >Spring Boot</span
+              >
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=bzf0DqjXFHIW&format=png&color=000000"
+                alt="React"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">React</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000"
+                alt="HTML5"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <!-- Animated Skills Row 2: défilement de gauche à droite -->
+        <div class="overflow-hidden w-full">
+          <div
+            class="flex flex-row justify-center items-center gap-24 text-7xl animate-scroll-right"
+            style="width: max-content"
+            id="skills-row-2"
+          >
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000"
+                alt="Python"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Python</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=xSkewUSqtErH&format=png&color=000000"
+                alt="Pandas"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Pandas</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=69132&format=png&color=000000"
+                alt="Hadoop"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Hadoop</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=17842&format=png&color=000000"
+                alt="Linux"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Linux</span>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000"
+                alt="Python"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Python</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=xSkewUSqtErH&format=png&color=000000"
+                alt="Pandas"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Pandas</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=69132&format=png&color=000000"
+                alt="Hadoop"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Hadoop</span>
+            </div>
+            <div class="flex flex-row items-center gap-6">
+              <img
+                src="https://img.icons8.com/?size=100&id=17842&format=png&color=000000"
+                alt="Linux"
+                class="w-20 h-20 inline-block"
+              />
+              <span class="text-2xl font-bold ml-4 text-white">Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="lg:w-4/6 md:w-[90%] w-[90%] mx-auto mt-20 flex lg:flex-row md:flex-col flex-col gap-10">
+      <div class="lg:w-1/3 md:w-full w-full space-y-6">
+        <p
+          class="text-md font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent"
+        >
+          My Services
+        </p>
+        <p class="text-4xl font-bold">I'm working as a freelencer</p>
+        <p>I'm currently proposing my Services on upwork</p>
+        <p
+          class="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-4 py-2 rounded-full w-fit"
+        >
+          get in touch on Up work
+        </p>
+      </div>
+      <div class="lg:w-2/3 md:w-full w-full flex-col space-y-4" id="accordion">
+        <div class="glass2 h-auto transition-all duration-300 overflow-hidden">
+          <div class="flex items-center justify-between h-[100px] px-6">
+            <span class="flex items-center gap-2">
+              <img
+                src="assets/icons8-rest-api-50.png"
+                alt=""
+                class="w-[30px]"
+              />
+              <p>back-end development</p>
+            </span>
+            <button
+              class="accordion-toggle text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-3 text-sm py-1 rounded-full"
+              data-index="0"
+            >
+              More
+            </button>
+          </div>
+          <div
+            class="accordion-content max-h-0 overflow-hidden transition-all duration-300 px-6"
+          >
+            <div class="py-4">
+              <div class="max-w-3xl mx-auto p-6 space-y-6">
+                <h2 class="text-2xl font-bold">
+                  🛠️ Backend Development Services
+                </h2>
+                <p>
+                  I help businesses and teams build reliable, secure, and
+                  scalable backend systems tailored to their real-world needs.
+                </p>
+
+                <p>
+                  As a <strong>freelance backend developer</strong>, I
+                  specialize in working with
+                  <strong>Java and Spring Boot</strong>, and offer services
+                  including:
+                </p>
+
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    <strong>API Development</strong> – RESTful APIs designed
+                    with clean architecture and clear separation of concerns.
+                  </li>
+                  <li>
+                    <strong>Authentication & Security</strong> – Secure login
+                    systems using JWT, OAuth2, and access control.
+                  </li>
+                  <li>
+                    <strong>Database Design & Integration</strong> – PostgreSQL
+                    support with data validation and performance.
+                  </li>
+                  <li>
+                    <strong>Cloud Deployment & File Storage</strong> – AWS
+                    Lambda, RDS, and S3 for backend hosting and file handling.
+                  </li>
+                  <li>
+                    <strong>Real-Time Communication</strong> – WebSocket (STOMP)
+                    for live messaging and notifications.
+                  </li>
+                  <li>
+                    <strong>Email & File Services</strong> – Integration with
+                    SMTP/Postfix or Mailgun for sending and managing emails.
+                  </li>
+                </ul>
+
+                <h3 class="text-xl font-semibold pt-4">🔍 What You’ll Get</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    Scalable backend services built with real-world use in mind
+                  </li>
+                  <li>Clear and maintainable codebase</li>
+                  <li>Honest communication and reliable delivery</li>
+                  <li>Solutions that fit your current and future goals</li>
+                </ul>
+
+                <p class="pt-4">
+                  I don't overpromise — I focus on delivering solid work that
+                  gets the job done.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass2 h-auto transition-all duration-300 overflow-hidden">
+          <div class="flex items-center justify-between h-[100px] px-6">
+            <span class="flex items-center gap-2">
+              <img src="assets/icons8-web-50.png" alt="" class="w-[30px]" />
+              <p>front-end</p>
+            </span>
+            <button
+              class="accordion-toggle text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-3 text-sm  py-1 rounded-full"
+              data-index="1"
+            >
+              More
+            </button>
+          </div>
+          <div
+            class="accordion-content max-h-0 overflow-hidden transition-all duration-300 px-6"
+          >
+            <div class="py-4">
+              <div class="max-w-3xl mx-auto p-6 space-y-6">
+                <h2 class="text-2xl font-bold">
+                  🎨 Frontend Development Services
+                </h2>
+                <p>
+                  I create responsive, user-friendly, and fast web interfaces
+                  that bring your ideas to life across devices and browsers.
+                </p>
+
+                <p>
+                  As a <strong>freelance frontend developer</strong>, I
+                  specialize in frameworks like <strong>React</strong> and
+                  <strong>Next.js</strong>, delivering modern, accessible, and
+                  interactive web apps. My services include:
+                </p>
+
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    <strong>Responsive UI Design</strong> – Clean layouts that
+                    adapt to any screen size.
+                  </li>
+                  <li>
+                    <strong>Modern Frameworks</strong> – Built with React and
+                    Next.js for performance and maintainability.
+                  </li>
+                  <li>
+                    <strong>API Integration</strong> – Seamless integration with
+                    backend services and third-party APIs.
+                  </li>
+                  <li>
+                    <strong>Component-Based Architecture</strong> – Reusable and
+                    scalable UI components for faster development.
+                  </li>
+                  <li>
+                    <strong>SEO & Performance Optimization</strong> – Fast
+                    loading and optimized pages for better search visibility.
+                  </li>
+                  <li>
+                    <strong>Accessible & Clean UI</strong> – Interfaces built
+                    with accessibility and best practices in mind.
+                  </li>
+                </ul>
+
+                <h3 class="text-xl font-semibold pt-4">🔍 What You’ll Get</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    Pixel-perfect frontend tailored to your brand and audience
+                  </li>
+                  <li>Clean, maintainable, and scalable code</li>
+                  <li>Fast load times and smooth user experience</li>
+                  <li>A collaborative approach focused on real user needs</li>
+                </ul>
+
+                <p class="pt-4">
+                  I prioritize clarity, performance, and usability — with no
+                  overpromising, just great results you can rely on.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass2 h-auto transition-all duration-300 overflow-hidden">
+          <div class="flex items-center justify-between h-[100px] px-6">
+            <span class="flex items-center gap-2">
+              <img
+                src="assets/icons8-database-50.png"
+                alt=""
+                class="w-[30px]"
+              />
+              <p>data engineering</p>
+            </span>
+            <button
+              class="accordion-toggle text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-3 text-sm py-1 rounded-full"
+              data-index="2"
+            >
+              More
+            </button>
+          </div>
+          <div
+            class="accordion-content max-h-0 overflow-hidden transition-all duration-300 px-6"
+          >
+            <div class="py-4">
+              <div class="max-w-3xl mx-auto p-6 space-y-6">
+                <h2 class="text-2xl font-bold">
+                  📊 ETL Process with Python & pandas
+                </h2>
+
+                <p>
+                  I build efficient and reliable ETL pipelines using
+                  <strong>Python</strong> and the
+                  <strong>pandas</strong> library, ideal for transforming raw
+                  data into actionable insights.
+                </p>
+
+                <h3 class="text-xl font-semibold">🔍 My ETL Workflow</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    <strong>Extract</strong> – Importing data from diverse
+                    sources such as CSV, Excel, databases, or APIs.
+                  </li>
+                  <li>
+                    <strong>Transform</strong> – Cleaning, filtering, merging,
+                    and restructuring data to prepare it for analysis.
+                  </li>
+                  <li>
+                    <strong>Load</strong> – Exporting the processed data to a
+                    database, spreadsheet, or data visualization tool.
+                  </li>
+                </ul>
+
+                <h3 class="text-xl font-semibold">⚙️ Tools & Skills</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    Advanced use of <strong>pandas</strong> for data
+                    manipulation.
+                  </li>
+                  <li>
+                    Integration with <strong>Jupyter Notebook</strong> for
+                    transparent and iterative development.
+                  </li>
+                  <li>
+                    Experience with <strong>Google Sheets</strong> and
+                    <strong>Looker Studio</strong> for reporting and dashboards.
+                  </li>
+                  <li>
+                    Automated workflows for recurring data processing tasks.
+                  </li>
+                </ul>
+
+                <p>
+                  I focus on clarity, reproducibility, and performance to ensure
+                  your data flows cleanly from source to insight.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass2 h-auto transition-all duration-300 overflow-hidden">
+          <div class="flex items-center justify-between h-[100px] px-6">
+            <span class="flex items-center gap-2">
+              <img
+                src="assets/icons8-desktop-50.png"
+                alt=""
+                class="w-[30px]"
+              />
+              <p>desktop development</p>
+            </span>
+            <button
+              class="accordion-toggle text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-3 text-sm py-1 rounded-full"
+              data-index="3"
+            >
+              More
+            </button>
+          </div>
+          <div
+            class="accordion-content max-h-0 overflow-hidden transition-all duration-300 px-6"
+          >
+            <div class="py-4">
+              <div class="max-w-3xl mx-auto p-6 space-y-6">
+                <h2 class="text-2xl font-bold">
+                  💻 Desktop Development Skills
+                </h2>
+
+                <div>
+                  <h3 class="text-xl font-semibold">☕ JavaFX</h3>
+                  <ul class="list-disc pl-5 space-y-2 mt-2">
+                    <li>
+                      Built offline desktop applications using JavaFX with clean
+                      and structured UIs.
+                    </li>
+                    <li>
+                      Integrated <strong>PostgreSQL</strong> for robust backend
+                      data management.
+                    </li>
+                    <li>
+                      Followed the <strong>MVC pattern</strong> to separate UI
+                      and business logic.
+                    </li>
+                    <li>
+                      Comfortable with Java standard libraries and external
+                      APIs.
+                    </li>
+                    <li>
+                      Experience aligns well with backend services developed in
+                      Spring Boot.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold">🖥️ Qt (C++)</h3>
+                  <ul class="list-disc pl-5 space-y-2 mt-2">
+                    <li>
+                      Developed cross-platform desktop applications using
+                      <strong>Qt 6.8.1</strong>.
+                    </li>
+                    <li>
+                      Implemented local data storage with
+                      <strong>SQLite</strong>.
+                    </li>
+                    <li>
+                      Managed CMake projects for building and maintaining Qt
+                      applications.
+                    </li>
+                    <li>
+                      Prepared and packaged apps for deployment and
+                      distribution.
+                    </li>
+                    <li>
+                      Focused on offline tools with interactive UI and local
+                      functionality.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>foot</footer>
+
+    <a
+      href="https://wa.me/+212698298095"
+      target="_blank"
+      class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition flex items-center justify-center animate-bounce"
+      aria-label="Contact me on WhatsApp"
+      style="animation: bounce 1.2s infinite"
+    >
+      <img
+        src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000"
+        alt="WhatsApp"
+        class="w-12 h-12"
+      />
+      <style>
+     
+      </style>
+    </a>
+    <script src="less-more.js"></script>
+  </body>
+</html>

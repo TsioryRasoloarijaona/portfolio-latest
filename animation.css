@@ -1,0 +1,47 @@
+          @keyframes scroll-left {
+              0% {
+                  transform: translateX(0);
+              }
+
+              100% {
+                  transform: translateX(-50%);
+              }
+          }
+
+          @keyframes scroll-right {
+              0% {
+                  transform: translateX(-50%);
+              }
+
+              100% {
+                  transform: translateX(0);
+              }
+          }
+
+          .animate-scroll-left {
+              animation: scroll-left 18s linear infinite;
+          }
+
+          .animate-scroll-right {
+              animation: scroll-right 18s linear infinite;
+          }
+
+
+             @keyframes bounce {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          20% {
+            transform: translateY(-12px);
+          }
+          40% {
+            transform: translateY(-24px);
+          }
+          60% {
+            transform: translateY(-12px);
+          }
+          80% {
+            transform: translateY(0);
+          }
+        }
