@@ -11,122 +11,143 @@
     <link rel="stylesheet" href="glass.css" />
     <link rel="stylesheet" href="gradient.css" />
     <link rel="stylesheet" href="animation.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="w-screen bg-[#0A0018] text-white py-6 overflow-x-hidden">
     <header class="w-screen space-y-20">
-      <nav class="lg:w-4/6 w-[90%]  mx-auto flex justify-between">
+      <nav class="lg:w-4/6 w-[90%] mx-auto flex justify-between">
         <div class="flex flex-row items-center gap-10">
-          <svg
-            class="w-6 h-6 text-white"
-            fill="currentColor"
-            viewBox="0 0 24 24"
+          <a href="https://github.com/TsioryRasoloarijaona" target="_blank">
+            <svg
+              class="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rasoloarijaona-tsiory-1964a3276/"
+            target="_blank"
           >
-            <path
-              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-            />
-          </svg>
-          <svg
-            class="w-6 h-6 text-white"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2.01 3.61 4.62v4.71z"
-            />
-          </svg>
-          <svg
-            class="w-6 h-6 text-white"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z"
-            />
-          </svg>
+            <svg
+              class="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2.01 3.61 4.62v4.71z"
+              />
+            </svg>
+          </a>
+          <a href="mailto:hei.tsiory@gmail.com" target="_blank">
+            <svg
+              class="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z"
+              />
+            </svg>
+          </a>
         </div>
         <!-- Desktop Nav -->
         <ul
-            class="hidden lg:flex flex-row items-center gap-10 justify-between p-4 text-sm font-semibold"
+          class="hidden lg:flex flex-row items-center gap-10 justify-between p-4 text-sm font-semibold"
         >
-            <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
-            <li>
-                <a href="#" class="text-white hover:text-gray-300">Projects</a>
-            </li>
-            <li>
-                <a href="#" class="text-white hover:text-gray-300">Skills</a>
-            </li>
-            <li>
-                <a href="#" class="text-white hover:text-gray-300">Services</a>
-            </li>
-            <li>
-                <a
-                    href="#"
-                    class="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-4 py-2 rounded-full"
-                    >Download my cv</a
-                >
-            </li>
+          <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+          <li>
+            <a href="#" class="text-white hover:text-gray-300">Projects</a>
+          </li>
+          <li>
+            <a href="#" class="text-white hover:text-gray-300">Skills</a>
+          </li>
+          <li>
+            <a href="#" class="text-white hover:text-gray-300">Services</a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-4 py-2 rounded-full"
+              >Download my cv</a
+            >
+          </li>
         </ul>
         <!-- Mobile Hamburger -->
         <div class="lg:hidden flex items-center">
-            <button id="drawer-toggle" class="focus:outline-none">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+          <button id="drawer-toggle" class="focus:outline-none">
+            <svg
+              class="w-8 h-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
         <!-- Drawer Menu -->
-        <div id="drawer-menu"
-            class="fixed top-0 right-0 h-full w-64 bg-[#1a0936] shadow-lg z-50 transform translate-x-full transition-transform duration-300 md:hidden">
-            <div class="flex flex-col p-8 gap-6">
-                <button id="drawer-close" class="self-end mb-4 focus:outline-none">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-                <a href="#" class="text-white hover:text-gray-300 text-lg">Home</a>
-                <a href="#" class="text-white hover:text-gray-300 text-lg">Projects</a>
-                <a href="#" class="text-white hover:text-gray-300 text-lg">Skills</a>
-                <a href="#" class="text-white hover:text-gray-300 text-lg">Services</a>
-                <a
-                    href="#"
-                    class="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-4 py-2 rounded-full text-center"
-                    >Download my cv</a
-                >
-            </div>
+        <div
+          id="drawer-menu"
+          class="fixed top-0 right-0 h-full w-64 bg-[#1a0936] shadow-lg z-50 transform translate-x-full transition-transform duration-300 md:hidden"
+        >
+          <div class="flex flex-col p-8 gap-6">
+            <button id="drawer-close" class="self-end mb-4 focus:outline-none">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <a href="#" class="text-white hover:text-gray-300 text-lg">Home</a>
+            <a href="#" class="text-white hover:text-gray-300 text-lg"
+              >Projects</a
+            >
+            <a href="#" class="text-white hover:text-gray-300 text-lg"
+              >Skills</a
+            >
+            <a href="#" class="text-white hover:text-gray-300 text-lg"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-4 py-2 rounded-full text-center"
+              >Download my cv</a
+            >
+          </div>
         </div>
-        <script>
-            // Drawer open/close logic
-            const drawerToggle = document.getElementById('drawer-toggle');
-            const drawerMenu = document.getElementById('drawer-menu');
-            const drawerClose = document.getElementById('drawer-close');
-            drawerToggle?.addEventListener('click', () => {
-                drawerMenu.classList.remove('translate-x-full');
-            });
-            drawerClose?.addEventListener('click', () => {
-                drawerMenu.classList.add('translate-x-full');
-            });
-            // Optional: close drawer on outside click
-            window.addEventListener('click', (e) => {
-                if (
-                    !drawerMenu.contains(e.target) &&
-                    !drawerToggle.contains(e.target) &&
-                    !drawerMenu.classList.contains('translate-x-full')
-                ) {
-                    drawerMenu.classList.add('translate-x-full');
-                }
-            });
-        </script>
       </nav>
       <div class="text-center flex flex-col items-center">
-        <div class="text-4xl font-bold text-white lg:w-1/3 md:w-[90%] w-[90%] leading-relaxed">
-          Let’s build something functional, fast, and user-friendly together
-        </div>
+        <div
+          id="animated-headline"
+          class="text-4xl font-bold text-white lg:w-1/3 md:w-[90%] w-[90%] leading-relaxed"
+        ></div>
+
         <p
           class="text-center text-md mt-10 font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent"
         >
@@ -135,10 +156,13 @@
       </div>
     </header>
     <main class="flex justify-center">
-      <div class="mt-20 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-4/6  gap-8 md:w-[90%] lg:w-4/6">
+      <div
+        class="mt-20 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-4/6 gap-8 md:w-[90%] lg:w-4/6"
+      >
         <!-- Card 1 -->
+        <!-- Add scroll-reveal class to each card -->
         <div
-          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm scroll-reveal"
         >
           <div>
             <h3 class="text-xl font-bold mb-2 text-left w-full">
@@ -191,7 +215,7 @@
         </div>
         <!-- Card 2 -->
         <div
-          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm scroll-reveal"
         >
           <div>
             <h3 class="text-xl font-bold mb-2 text-left w-full">
@@ -254,7 +278,7 @@
         </div>
         <!-- Card 3 -->
         <div
-          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm scroll-reveal"
         >
           <div>
             <h3 class="text-xl font-bold mb-2 text-left w-full">
@@ -317,7 +341,7 @@
         </div>
         <!-- Card 4 -->
         <div
-          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm scroll-reveal"
         >
           <div>
             <h3 class="text-xl font-bold mb-2 text-left w-full">
@@ -351,7 +375,7 @@
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11</div>.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                 />
               </svg>
               <a
@@ -372,7 +396,7 @@
         </div>
         <!-- Card 5 -->
         <div
-          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm scroll-reveal"
         >
           <div>
             <h3 class="text-xl font-bold mb-2 text-left w-full">
@@ -407,7 +431,7 @@
               </svg>
               <span class="text-yellow-400 font-medium">In Progress</span>
             </div>
-            <div class="flex items-ce</div>nter space-x-2">
+            <div class="flex items-center space-x-2">
               <svg
                 class="w-6 h-6 text-white"
                 fill="currentColor"
@@ -435,7 +459,7 @@
         </div>
         <!-- Card 6 -->
         <div
-          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm"
+          class="glass flex flex-col justify-between p-6 rounded-xl shadow-lg w-full text-sm scroll-reveal"
         >
           <div>
             <h3 class="text-xl font-bold mb-2 text-left w-full">
@@ -665,7 +689,9 @@
         </div>
       </div>
     </section>
-    <section class="lg:w-4/6 md:w-[90%] w-[90%] mx-auto mt-20 flex lg:flex-row md:flex-col flex-col gap-10">
+    <section
+      class="lg:w-4/6 md:w-[90%] w-[90%] mx-auto mt-20 flex lg:flex-row md:flex-col flex-col gap-10"
+    >
       <div class="lg:w-1/3 md:w-full w-full space-y-6">
         <p
           class="text-md font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent"
@@ -677,11 +703,16 @@
         <p
           class="text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-4 py-2 rounded-full w-fit"
         >
-          get in touch on Up work
+          <a href="https://www.upwork.com/freelancers/~01664a6f32fafdd1e3"
+            >get in touch on Up work</a
+          >
         </p>
       </div>
       <div class="lg:w-2/3 md:w-full w-full flex-col space-y-4" id="accordion">
-        <div class="glass2 h-auto transition-all duration-300 overflow-hidden">
+        <div
+          class="glass2 h-auto transition-all duration-300 overflow-hidden"
+          data-a
+        >
           <div class="flex items-center justify-between h-[100px] px-6">
             <span class="flex items-center gap-2">
               <img
@@ -763,14 +794,14 @@
             </div>
           </div>
         </div>
-        <div class="glass2 h-auto transition-all duration-300 overflow-hidden">
+        <div class="glass2 h-auto overflow-hidden">
           <div class="flex items-center justify-between h-[100px] px-6">
             <span class="flex items-center gap-2">
               <img src="assets/icons8-web-50.png" alt="" class="w-[30px]" />
               <p>front-end</p>
             </span>
             <button
-              class="accordion-toggle text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-3 text-sm  py-1 rounded-full"
+              class="accordion-toggle text-white bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 px-3 text-sm py-1 rounded-full"
               data-index="1"
             >
               More
@@ -920,11 +951,7 @@
         <div class="glass2 h-auto transition-all duration-300 overflow-hidden">
           <div class="flex items-center justify-between h-[100px] px-6">
             <span class="flex items-center gap-2">
-              <img
-                src="assets/icons8-desktop-50.png"
-                alt=""
-                class="w-[30px]"
-              />
+              <img src="assets/icons8-desktop-50.png" alt="" class="w-[30px]" />
               <p>desktop development</p>
             </span>
             <button
@@ -1000,7 +1027,64 @@
         </div>
       </div>
     </section>
-    <footer>foot</footer>
+    <div class="glass lg:w-4/6 md:w-[90%] w-[90%] h-[1px] mt-20 mx-auto"></div>
+    <footer class="mt-20 text-white py-10">
+      <div
+        class="lg:w-4/6 md:w-[90%] w-[90%] mx-auto lg:flex-row flex flex-col gap-10"
+      >
+        <div class="lg:w-2/3 md:w-full w-full">
+          <h2
+            class="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent"
+          >
+            Tsiory Rasoloarijaona
+          </h2>
+          <p class="text-[#645D6F] lg:w-2/3 md:w-full w-full text-justify">
+            I am a passionate software developer with a focus on backend and
+            frontend technologies. I love building scalable applications and
+            solving real-world problems through code.
+          </p>
+          <div class="flex gap-8 mt-4 text-2xl text-[#645D6F]">
+            <a href=""><i class="fa-solid fa-envelope"></i> </a>
+            <a href=""><i class="fa-brands fa-github"></i> </a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i> </a>
+            <a href=""><i class="fa-brands fa-upwork"></i></a>
+          </div>
+        </div>
+        <div
+          class="flex lg:flex-row md:flex-col flex-col gap-10 lg:w-1/3 md:w-full w-full justify-between"
+        >
+          <div>
+            <h3 class="text-xl font-bold mb-4">Services</h3>
+            <ul class="space-y-2 text-[#645D6F]">
+              <li>Backend Development</li>
+              <li>Frontend Development</li>
+              <li>Data Engineering</li>
+              <li>Desktop Development</li>
+            </ul>
+          </div>
+
+          <!-- Skills Section -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Skills</h3>
+            <ul class="space-y-2 text-[#645D6F]">
+              <li>Java, Spring Boot</li>
+              <li>React, Next.js</li>
+              <li>Python, Pandas</li>
+              <li>Hadoop, Linux</li>
+              <li>JavaFX, Qt (C++)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="glass lg:w-4/6 md:w-[90%] w-[90%] h-[1px] mt-20 mx-auto"
+      ></div>
+      <div
+        class="lg:w-4/6 md:w-[90%] w-[90%] mx-auto mt-8 text-[#645D6F] text-sm"
+      >
+        &copy; 2025 Tsiory Rasoloarijaona. All rights reserved.
+      </div>
+    </footer>
 
     <a
       href="https://wa.me/+212698298095"
@@ -1014,10 +1098,14 @@
         alt="WhatsApp"
         class="w-12 h-12"
       />
-      <style>
-     
-      </style>
+      <style></style>
     </a>
     <script src="less-more.js"></script>
+    <script src="drawer.js"></script>
+    <script src="write-effect.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
